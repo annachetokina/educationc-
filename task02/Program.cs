@@ -15,8 +15,10 @@ if (a == b)
 else if (a > b)
 {
  Console.WriteLine($"max = {a}");
+ Console.WriteLine($"min = {b}");
 }
 else
 {
  Console.WriteLine($"max = {b}");
+ Console.WriteLine($"min = {a}");
 }
