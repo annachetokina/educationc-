@@ -7,4 +7,17 @@ Console.WriteLine("Введите число от 100 до 999:");
 
 int num = Convert.ToInt32(Console.ReadLine());
 
-int SecondNum = (int number)
+
+int ShowSecondDigit(int numb)
+
+{
+    
+    int secondDigit = numb % 100;
+    int result = secondDigit / 10 ;
+    return result;
+}
+
+Console.WriteLine(ShowSecondDigit(num));
+
+
+
