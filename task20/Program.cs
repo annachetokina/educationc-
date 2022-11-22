@@ -6,13 +6,25 @@
 // A (7,-5); B (1,-1) -> 7,21
 
 Console.WriteLine("Введите координаты точки XA");
-double xa = Convert.ToInt32(Console.ReadLine());
+int xa = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Введите координаты точки YA");
-double ya = Convert.ToInt32(Console.ReadLine());
+int ya = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Введите координаты точки XB");
-double xb = Convert.ToInt32(Console.ReadLine());
+int xb = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Введите координаты точки YB");
-double yb = Convert.ToInt32(Console.ReadLine());
+int yb = Convert.ToInt32(Console.ReadLine());
+
+double Distance(int xa1, int ya1, int xb1, int yb1)
+{
+    double xc = (xa1 - xb1) * (xa1 - xb1);
+    double yc = (ya1 - yb1) * (ya1 - yb1);
+    double result = Math.Sqrt(xc + yc);
+    return result;
+}
+
+double res = Distance(xa, ya, xb, yb);
+double resRound = Math.Round(res, 2, MidpointRounding.ToZero);
+Console.WriteLine(resRound);
