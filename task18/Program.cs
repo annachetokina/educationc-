@@ -6,18 +6,15 @@ Console.WriteLine("Укажите номер четверти");
 
 int quarter = Convert.ToInt32(Console.ReadLine());
 
-int Range (int quarter)
+string Range (int quarter1)
 {
-    if (quarter == 1) return x > 0 и y > 0;
-    if (quarter == 2) return x < 0 и y> 0 ;
-    if (quarter == 3) return (xc < 0 && yc < 0) return 3;
-    if (quarter == 4) return (xc > 0 && yc < 0) return 4;
-    return 0;
+    if (quarter1 == 1) return "x > 0 и y > 0";
+    if (quarter1 == 2) return "x < 0 и y > 0";
+    if (quarter1 == 3) return "x < 0 и y < 0";
+    if (quarter1 == 4) return "x > 0 и y < 0";
+    return "Указан неверный номер четверти";
 }
 
-int quarter = Quarter(x, y);
+string range  = Range(quarter);
 
-string result = quarter > 0 
-        ? $"Указанные координаты соответствуют четверти -> {quarter}"
-        : "Введены некорректные координаты";
-Console.WriteLine(result);
+Console.WriteLine(range);
