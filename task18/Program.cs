@@ -4,15 +4,15 @@
 
 Console.WriteLine("Укажите номер четверти");
 
-int quarter = Convert.ToInt32(Console.ReadLine());
+string quarter = Console.ReadLine();
 
-string Range (int quarter1)
+string Range (string quarter1)
 {
-    if (quarter1 == 1) return "x > 0 и y > 0";
-    if (quarter1 == 2) return "x < 0 и y > 0";
-    if (quarter1 == 3) return "x < 0 и y < 0";
-    if (quarter1 == 4) return "x > 0 и y < 0";
-    return "Указан неверный номер четверти";
+    if (quarter1 == "1") return "x > 0 и y > 0";
+    if (quarter1 == "2") return "x < 0 и y > 0";
+    if (quarter1 == "3") return "x < 0 и y < 0";
+    if (quarter1 == "4") return "x > 0 и y < 0";
+    return "Введены неверные данные";
 }
 
 string range  = Range(quarter);
